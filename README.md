@@ -80,29 +80,24 @@ Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
 ### Registro de Usuário
 
-**POST** `/sign-up`
-
+- **POST** `/sign-up`
    ```json
-{
-  "name": "Jane Doe",
-  "email": "jane.doe@example.com",
-  "password": "securepassword123"
-}
-
-**POST** `/sign-in`
-
-   ```json
-    {
+   {
+      "name": "Jane Doe",
       "email": "jane.doe@example.com",
       "password": "securepassword123"
     }
 
+**POST** `/sign-in`
+  {
+      "email": "jane.doe@example.com",
+      "password": "securepassword123"
+  }
 
 ### Criação de Transação (Rotas com Autenticação)
 
 **POST (NEW TRANSACTION)** `/transactions`
 
-   ```json
 {
   "value": 100.50,
   "description": "Grocery shopping",
