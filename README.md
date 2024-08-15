@@ -108,7 +108,6 @@ Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
 **PUT (UPDATE TRANSACTION)** `/transactions/:id`
 
-   ```json
 {
   "value": 100.50,
   "description": "Grocery shopping",
@@ -123,9 +122,6 @@ Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
 **GET** `/balance`
 
-Resposta:
-
-   ```json
 {
   "balance": 500.00
 }
