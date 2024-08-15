@@ -40,7 +40,7 @@ My Wallet Backend é uma API RESTful desenvolvida para gerenciar transações fi
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/my-wallet-backend.git
+   git clone https://github.com/felipe-bms/my-wallet-backend.git
    cd my-wallet-backend
 
 2. **Instale as dependências:**
@@ -82,23 +82,47 @@ Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
 **POST** `/sign-up`
 
-```json
+   ```json
 {
   "name": "Jane Doe",
   "email": "jane.doe@example.com",
   "password": "securepassword123"
 }
 
-### Criação de Transação
+**POST** `/sign-in`
 
-**POST** `/transactions`
+   ```json
+    {
+      "email": "jane.doe@example.com",
+      "password": "securepassword123"
+    }
 
-```json
+
+### Criação de Transação (Rotas com Autenticação)
+
+**POST (NEW TRANSACTION)** `/transactions`
+
+   ```json
 {
   "value": 100.50,
   "description": "Grocery shopping",
   "type": "withdraw"
 }
+
+**GET ALL CLIENT TRANSACTIONS** `/transactions`
+
+**PUT (UPDATE TRANSACTION)** `/transactions/:id`
+
+   ```json
+{
+  "value": 100.50,
+  "description": "Grocery shopping",
+  "type": "withdraw"
+}
+
+**DELETE TRANSACTION** `/transactions/:id`
+
+
 
 ### Consulta de Saldo
 
@@ -106,7 +130,7 @@ Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
 Resposta:
 
-```json
+   ```json
 {
   "balance": 500.00
 }
